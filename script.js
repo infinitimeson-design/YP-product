@@ -116,13 +116,23 @@ const STORAGE_KEY = "yp-theme";
 
 const applyTheme = (theme) => {
 
+    const heroLogo = document.getElementById("hero-logo");
+
     if (theme === "light") {
 
         body.classList.add("light");
 
+        if (heroLogo) {
+            heroLogo.src = "assets/images/logo/logo-black.png";
+        }
+
     } else {
 
         body.classList.remove("light");
+
+        if (heroLogo) {
+            heroLogo.src = "assets/images/logo/logo-white.png";
+        }
 
     }
 
