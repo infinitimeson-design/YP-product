@@ -91,11 +91,11 @@ ol{
 
     /* ---------- COLORS ---------- */
 
-    --color-black:#0B0B0B;
+    --color-black:#0E1109;
 
-    --color-surface:#111111;
+    --color-surface:#151A10;
 
-    --color-surface-light:#181818;
+    --color-surface-light:#1C2215;
 
     --color-white:#F7F7F5;
 
@@ -106,14 +106,17 @@ ol{
     --color-silver:#C2C2C2;
 
     --color-border:rgba(255,255,255,.08);
-
+   
     --color-overlay:rgba(0,0,0,.45);
+
+    --color-gold:rgba(168,131,42,1);
+
 
 
 
     /* ---------- BACKGROUND ---------- */
 
-    --background:#0B0B0B;
+    --background:#0E1109;
 
 
 
@@ -2123,13 +2126,13 @@ p{
 
 body.light{
 
-    --background:#F7F7F5;
+    --background:#EDE5D8;
 
     --color-black:#111111;
 
-    --color-surface:#FFFFFF;
+    --color-surface:#E8DFD0;
 
-    --color-surface-light:#F2F2F2;
+    --color-surface-light:#E2D8C8;
 
     --color-white:#111111;
 
@@ -2142,6 +2145,9 @@ body.light{
     --color-border:rgba(0,0,0,.08);
 
     --color-overlay:rgba(255,255,255,.35);
+
+    --color-gold:rgba(139,106,31,1);
+
 
 }
 
