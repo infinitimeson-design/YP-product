@@ -15,8 +15,6 @@ const body = document.body;
 
 const navbar = document.querySelector(".navbar");
 
-const themeToggle = document.querySelector(".theme-toggle");
-
 const navLinks = document.querySelectorAll(".navbar__menu a");
 
 const revealElements = document.querySelectorAll(".reveal");
