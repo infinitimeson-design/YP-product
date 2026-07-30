@@ -1239,20 +1239,27 @@ p{
 }
 
 
+/* ==========================================
+   PORTFOLIO GRID V2
+==========================================*/
+
 .portfolio-grid{
 
-    width:min(92%,var(--container));
+    width:min(88%,var(--container));
 
     margin-inline:auto;
 
     display:grid;
 
-    grid-template-columns:repeat(12,1fr);
+    grid-template-columns:repeat(12,minmax(0,1fr));
 
-    gap:22px;
+    grid-auto-flow:dense;
+
+    gap:34px;
+
+    align-items:start;
 
 }
-
 
 
 /* =========================================================
