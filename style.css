@@ -340,84 +340,53 @@ p{
     color:var(--color-black);
 
 }
-
-/* =========================================================
-   BUTTONS
-=========================================================*/
-
-.btn{
-
-    display:inline-flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    gap:10px;
-
-    min-width:170px;
-
-    height:56px;
-
-    padding:0 34px;
-
-    border-radius:999px;
-
-    font-family:var(--font-fa);
-
-    font-size:.95rem;
-
-    font-weight:500;
-
-    transition:var(--transition);
-
-    user-select:none;
-
-    overflow:hidden;
-
-    position:relative;
-
+/* ===== BUTTONS ===== */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-width: 170px;
+    height: 56px;
+    padding: 0 34px;
+    border-radius: 999px;
+    transition: var(--transition);
+    overflow: hidden;
+    position: relative;
+    border: 1px solid var(--color-border);
+    color: var(--color-white);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background: transparent;
+    cursor: pointer;
+    text-decoration: none;
 }
 
-.btn-primary{
-
-    background:var(--color-white);
-
-    color:var(--color-black);
-
-    box-shadow:var(--shadow-soft);
-
+.btn:hover {
+    background: rgba(255,255,255,.06);
+    transform: translateY(-3px);
 }
 
-.btn-primary:hover{
-
-    transform:translateY(-3px);
-
-    box-shadow:var(--shadow-hover);
-
+.btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,.25), transparent);
+    transition: .75s;
 }
 
-.btn-secondary{
-
-    border:1px solid var(--color-border);
-
-    color:var(--color-white);
-
-    backdrop-filter:blur(10px);
-
-    -webkit-backdrop-filter:blur(10px);
-
+.btn:hover::before {
+    left: 120%;
 }
 
-.btn-secondary:hover{
-
-    background:rgba(255,255,255,.06);
-
-    transform:translateY(-3px);
-
+/* حذف استایل‌های اختصاصی قدیمی */
+.btn-primary,
+.btn-secondary {
+    /* همه چیز از .btn ارث می‌برن */
 }
-
-
 
 /* =========================================================
    CARD SYSTEM
