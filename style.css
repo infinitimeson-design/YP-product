@@ -2070,40 +2070,6 @@ p{
    
 }
 
-/* =========================================================
-   THEME SYSTEM
-   LIGHT MODE
-==========================================*/
-
-body.light{
-
-    --background:#EDE5D8;
-
-    --color-black:#111111;
-
-    --color-surface:#E8DFD0;
-
-    --color-surface-light:#E2D8C8;
-
-    --color-white:#111111;
-
-    --color-text:#4B4338;
-   
-    --color-text-secondary:#7B7266;
-
-    --color-silver:#7A7A7A;
-
-    --color-border:rgba(0,0,0,.08);
-
-    --color-overlay:rgba(255,255,255,.35);
-
-    --color-gold:rgba(139,106,31,1);
-
-
-}
-
-
-
 /* ==========================================
    BODY
 ==========================================*/
