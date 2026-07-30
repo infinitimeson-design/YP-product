@@ -1399,42 +1399,45 @@ p{
 /* =========================================================
    GRID SIZES
 =========================================================*/
+/* =========================================================
+   EDITORIAL GRID
+=========================================================*/
 
 .portfolio-card{
 
-    grid-column:span 4;
+    grid-column:span 3;
 
-    min-height:360px;
+    min-height:300px;
 
 }
-
 
 .portfolio-card--featured{
 
-    grid-column:span 8;
+    grid-column:span 6;
 
-    min-height:520px;
+    grid-row:span 2;
+
+    min-height:640px;
 
 }
-
 
 .portfolio-card--wide{
 
-    grid-column:span 8;
+    grid-column:span 6;
 
-    min-height:360px;
+    min-height:340px;
 
 }
-
 
 .portfolio-card--vertical{
 
-    grid-column:span 4;
+    grid-column:span 3;
 
-    min-height:520px;
+    grid-row:span 2;
+
+    min-height:640px;
 
 }
-
 
 
 /* =========================================================
