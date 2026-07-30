@@ -99,9 +99,9 @@ ol{
 
     --color-white:#F7F7F5;
 
-    --color-text:#ECECEC;
-
-    --color-text-secondary:#9A9A9A;
+    --color-text: #D7D1C4;
+   
+    --color-text-secondary: #8F8A7D;
 
     --color-silver:#C2C2C2;
 
@@ -2136,9 +2136,9 @@ body.light{
 
     --color-white:#111111;
 
-    --color-text:#202020;
-
-    --color-text-secondary:#666666;
+    --color-text:#4B4338;
+   
+    --color-text-secondary:#7B7266;
 
     --color-silver:#7A7A7A;
 
