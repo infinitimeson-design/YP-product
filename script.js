@@ -103,95 +103,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
 /* ==========================================================
    PART 2 / 4
-   Theme System
+   Hero Logo (Fixed - Dark Theme Only)
 ========================================================== */
 
-const STORAGE_KEY = "yp-theme";
+const heroLogo = document.getElementById("hero-logo");
 
-/* ==========================================================
-   APPLY THEME
-========================================================== */
-
-const applyTheme = (theme) => {
-
-    const heroLogo = document.getElementById("hero-logo");
-
-    if (theme === "light") {
-
-        body.classList.add("light");
-
-        if (heroLogo) {
-            heroLogo.src = "assets/images/logo/logo-black.png";
-        }
-
-    } else {
-
-        body.classList.remove("light");
-
-        if (heroLogo) {
-            heroLogo.src = "assets/images/logo/logo-white.png";
-        }
-
-    }
-
-    localStorage.setItem(STORAGE_KEY, theme);
-
-};
-
-
-/* ==========================================================
-   INITIAL THEME
-========================================================== */
-
-const initTheme = () => {
-
-    const savedTheme = localStorage.getItem(STORAGE_KEY);
-
-    if (savedTheme) {
-
-        applyTheme(savedTheme);
-
-        return;
-
-    }
-
-    const prefersLight = window.matchMedia(
-        "(prefers-color-scheme: light)"
-    ).matches;
-
-    applyTheme(prefersLight ? "light" : "dark");
-
-};
-
-
-/* ==========================================================
-   TOGGLE
-========================================================== */
-
-themeToggle?.addEventListener("click", () => {
-
-    const isLight = body.classList.contains("light");
-
-    applyTheme(isLight ? "dark" : "light");
-
-});
-
-
-/* ==========================================================
-   SYSTEM CHANGE
-========================================================== */
-
-window.matchMedia("(prefers-color-scheme: light)")
-.addEventListener("change", (event) => {
-
-    if (!localStorage.getItem(STORAGE_KEY)) {
-
-        applyTheme(event.matches ? "light" : "dark");
-
-    }
-
-});
-
+if (heroLogo) {
+    heroLogo.src = "assets/images/logo/logo-white.png";
+}
 
 /* ==========================================================
    INIT
