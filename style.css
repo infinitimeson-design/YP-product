@@ -87,31 +87,28 @@ ol{
    ROOT
 ========================================================= */
 
+:root{
+
     /* ---------- COLORS ---------- */
 
-   :root{
+    --color-black:#0B0B0B;
 
-    --bg:#090909;
+    --color-surface:#111111;
 
-    --surface:#111111;
+    --color-surface-light:#181818;
 
-    --surface-2:#171717;
+    --color-white:#F7F7F5;
 
-    --border:rgba(255,255,255,.06);
+    --color-text:#ECECEC;
 
-    --text:#E7E2D8;
+    --color-text-secondary:#9A9A9A;
 
-    --text-soft:#B6B0A3;
+    --color-silver:#C2C2C2;
 
-    --text-muted:#7E7A72;
+    --color-border:rgba(255,255,255,.08);
 
-    --accent:#C8A46A;
+    --color-overlay:rgba(0,0,0,.45);
 
-    --accent-soft:#8E7142;
-
-    --overlay:rgba(9,9,9,.45);
-
-}
 
 
     /* ---------- BACKGROUND ---------- */
