@@ -1286,8 +1286,19 @@ p{
 
 }
 
+.portfolio-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:24px;
+
+}
 
 .portfolio-card img{
+
+    display:block;
 
     width:100%;
 
@@ -1295,22 +1306,27 @@ p{
 
     object-fit:cover;
 
-    aspect-ratio:1/1;
-
     transition:
-    transform .7s ease,
-    filter .55s ease;
+        transform .7s ease,
+        filter .55s ease;
 
     filter:
-
-    brightness(.72)
-
-    saturate(.45)
-
-    blur(.4px);
+        brightness(.72)
+        saturate(.45)
+        blur(.4px);
 
 }
 
+.portfolio-card:hover img{
+
+    transform:scale(1.04);
+
+    filter:
+        brightness(1)
+        saturate(1)
+        blur(0);
+
+}
 
 
 /* =========================================================
