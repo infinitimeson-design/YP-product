@@ -91,24 +91,29 @@ ol{
 
     /* ---------- COLORS ---------- */
 
-    --color-black:#0B0B0B;
+   :root{
 
-    --color-surface:#111111;
+    --bg:#090909;
 
-    --color-surface-light:#181818;
+    --surface:#111111;
 
-    --color-white:#F7F7F5;
+    --surface-2:#171717;
 
-    --color-text:#ECECEC;
+    --border:rgba(255,255,255,.06);
 
-    --color-text-secondary:#9A9A9A;
+    --text:#E7E2D8;
 
-    --color-silver:#C2C2C2;
+    --text-soft:#B6B0A3;
 
-    --color-border:rgba(255,255,255,.08);
+    --text-muted:#7E7A72;
 
-    --color-overlay:rgba(0,0,0,.45);
+    --accent:#C8A46A;
 
+    --accent-soft:#8E7142;
+
+    --overlay:rgba(9,9,9,.45);
+
+}
 
 
     /* ---------- BACKGROUND ---------- */
