@@ -1296,9 +1296,9 @@ p{
 
     filter:
 
-    brightness(.55)
+    brightness(.72)
 
-    saturate(.75)
+    saturate(.45)
 
     blur(.4px);
 
@@ -1319,7 +1319,7 @@ p{
 
 .portfolio-card:hover img{
 
-    transform:scale(1.06);
+    transform:scale(1.03);
 
     filter:
 
