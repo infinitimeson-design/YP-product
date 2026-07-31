@@ -2071,124 +2071,6 @@ p{
 }
 
 /* ==========================================
-   CARDS
-==========================================*/
-
-body.light .card,
-body.light .about-card,
-body.light .service-card,
-body.light .contact-card{
-
-    background:#ffffff;
-
-    border:1px solid rgba(0,0,0,.08);
-
-}
-
-
-body.light .service-card__icon,
-body.light .contact-card__icon{
-
-    background:#F3F3F3;
-
-}
-
-
-body.light .service-card__icon svg,
-body.light .contact-card__icon svg{
-
-    stroke:#111111;
-
-}
-
-
-
-/* ==========================================
-   PORTFOLIO
-==========================================*/
-
-body.light .portfolio-card{
-
-    background:#EDEDED;
-
-}
-
-
-body.light .portfolio-card img{
-
-    filter:
-
-    brightness(.72)
-
-    saturate(.8)
-
-    blur(.4px);
-
-}
-
-
-body.light .portfolio-card:hover img{
-
-    filter:
-
-    brightness(1)
-
-    saturate(1)
-
-    blur(0);
-
-}
-
-
-
-/* ==========================================
-   FOOTER
-==========================================*/
-
-body.light .footer{
-
-    border-top:1px solid rgba(0,0,0,.08);
-
-}
-
-
-body.light .footer__credit{
-
-    color:#666666;
-
-}
-
-
-
-/* ==========================================
-   THEME TOGGLE
-==========================================*/
-
-body.light .theme-toggle{
-
-    background:#ffffff;
-
-    border:1px solid rgba(0,0,0,.08);
-
-}
-
-
-body.light .theme-toggle span{
-
-    border-color:#111111;
-
-}
-
-
-body.light .theme-toggle span::before{
-
-    background:#111111;
-
-}
-
-
-
-/* ==========================================
    TRANSITION
 ==========================================*/
 
@@ -2551,32 +2433,6 @@ body,
 ::-webkit-scrollbar-thumb:hover{
 
     background:#9A9A9A;
-
-}
-
-
-
-/* ==========================================
-   LIGHT MODE SCROLLBAR
-==========================================*/
-
-body.light::-webkit-scrollbar-track{
-
-    background:#F5F5F5;
-
-}
-
-
-body.light::-webkit-scrollbar-thumb{
-
-    background:#B6B6B6;
-
-}
-
-
-body.light::-webkit-scrollbar-thumb:hover{
-
-    background:#8A8A8A;
 
 }
 
@@ -3342,16 +3198,6 @@ button,
 .contact-card{
 
     border:1px solid rgba(255,255,255,.06);
-
-}
-
-
-body.light .card,
-body.light .about-card,
-body.light .service-card,
-body.light .contact-card{
-
-    border:1px solid rgba(0,0,0,.08);
 
 }
 
