@@ -89,27 +89,31 @@ ol{
 
     /* ---------- COLORS ---------- */
 
+    --background:#0E1109;
+
     --color-black:#0E1109;
 
     --color-surface:#151A10;
 
+    --color-surface-light:#1C2215;
+
     --color-white:#F7F7F5;
 
-    --color-text: #D7D1C4;
-   
-    --color-text-secondary: #8F8A7D;
+    --color-text:#D7D1C4;
+
+    --color-text-secondary:#8F8A7D;
 
     --color-silver:#C2C2C2;
 
     --color-border:rgba(255,255,255,.08);
-   
+
     --color-overlay:rgba(0,0,0,.45);
 
-    --color-gold:rgba(168,131,42,1);
+    /* ---------- BRAND ACCENT ---------- */
 
+    --color-accent:#BFC5C9;
 
-
-
+}
     /* ---------- BACKGROUND ---------- */
 
     --background:#0E1109;
@@ -987,7 +991,7 @@ p{
 
     line-height:1.15;
 
-    color:var(--color-gold);
+   color:var(--color-accent);
 
     margin-bottom:36px;
 
