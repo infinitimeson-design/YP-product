@@ -89,8 +89,6 @@ ol{
 
     /* ---------- COLORS ---------- */
 
-    --background:#0E1109;
-
     --color-black:#0E1109;
 
     --color-surface:#151A10;
@@ -99,21 +97,21 @@ ol{
 
     --color-white:#F7F7F5;
 
-    --color-text:#D7D1C4;
-
-    --color-text-secondary:#8F8A7D;
+    --color-text: #D7D1C4;
+   
+    --color-text-secondary: #8F8A7D;
 
     --color-silver:#C2C2C2;
 
     --color-border:rgba(255,255,255,.08);
-
+   
     --color-overlay:rgba(0,0,0,.45);
 
-    /* ---------- BRAND ACCENT ---------- */
+    --color-gold:rgba(168,131,42,1);
 
-    --color-accent:#BFC5C9;
 
-}
+
+
     /* ---------- BACKGROUND ---------- */
 
     --background:#0E1109;
@@ -315,7 +313,7 @@ p{
 
     font-size:clamp(2rem,4vw,3.6rem);
 
-    color:var(--color-silver);
+    color:var(--color-gold);
 
     margin-bottom:24px;
 
@@ -342,53 +340,84 @@ p{
     color:var(--color-black);
 
 }
-/* ===== BUTTONS ===== */
-.btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    min-width: 170px;
-    height: 56px;
-    padding: 0 34px;
-    border-radius: 999px;
-    transition: var(--transition);
-    overflow: hidden;
-    position: relative;
-    border: 1px solid var(--color-border);
-    color: var(--color-white);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    background: transparent;
-    cursor: pointer;
-    text-decoration: none;
+
+/* =========================================================
+   BUTTONS
+=========================================================*/
+
+.btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    min-width:170px;
+
+    height:56px;
+
+    padding:0 34px;
+
+    border-radius:999px;
+
+    font-family:var(--font-fa);
+
+    font-size:.95rem;
+
+    font-weight:500;
+
+    transition:var(--transition);
+
+    user-select:none;
+
+    overflow:hidden;
+
+    position:relative;
+
 }
 
-.btn:hover {
-    background: rgba(255,255,255,.06);
-    transform: translateY(-3px);
+.btn-primary{
+
+    background:var(--color-white);
+
+    color:var(--color-black);
+
+    box-shadow:var(--shadow-soft);
+
 }
 
-.btn::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -120%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,.25), transparent);
-    transition: .75s;
+.btn-primary:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:var(--shadow-hover);
+
 }
 
-.btn:hover::before {
-    left: 120%;
+.btn-secondary{
+
+    border:1px solid var(--color-border);
+
+    color:var(--color-white);
+
+    backdrop-filter:blur(10px);
+
+    -webkit-backdrop-filter:blur(10px);
+
 }
 
-/* حذف استایل‌های اختصاصی قدیمی */
-.btn-primary,
-.btn-secondary {
-    /* همه چیز از .btn ارث می‌برن */
+.btn-secondary:hover{
+
+    background:rgba(255,255,255,.06);
+
+    transform:translateY(-3px);
+
 }
+
+
 
 /* =========================================================
    CARD SYSTEM
@@ -991,7 +1020,7 @@ p{
 
     line-height:1.15;
 
-   color:var(--color-accent);
+    color:var(--color-gold);
 
     margin-bottom:36px;
 
@@ -2072,6 +2101,246 @@ p{
    
 }
 
+/* =========================================================
+   THEME SYSTEM
+   LIGHT MODE
+==========================================*/
+
+body.light{
+
+    --background:#EDE5D8;
+
+    --color-black:#111111;
+
+    --color-surface:#E8DFD0;
+
+    --color-surface-light:#E2D8C8;
+
+    --color-white:#111111;
+
+    --color-text:#4B4338;
+   
+    --color-text-secondary:#7B7266;
+
+    --color-silver:#7A7A7A;
+
+    --color-border:rgba(0,0,0,.08);
+
+    --color-overlay:rgba(255,255,255,.35);
+
+    --color-gold:rgba(139,106,31,1);
+
+
+}
+
+
+
+/* ==========================================
+   BODY
+==========================================*/
+
+body.light{
+
+    background:var(--background);
+
+    color:var(--color-text);
+
+}
+
+
+
+/* ==========================================
+   NAVBAR
+==========================================*/
+
+body.light .navbar{
+
+    background:rgba(237,229,216,.82);
+
+    border-bottom:1px solid rgba(75,67,56,.08);
+
+}
+
+
+body.light .navbar.scrolled{
+
+    background:rgba(237,229,216,.95);
+
+}
+
+
+/* ==========================================
+   TEXT
+==========================================*/
+
+body.light p{
+
+    color:var(--color-text-secondary);
+
+}
+
+
+body.light h1,
+body.light h2,
+body.light h3,
+body.light h4,
+body.light h5,
+body.light h6{
+
+    color:var(--color-text);
+
+}
+
+
+body.light .section-header__eyebrow{
+
+    color:var(--color-silver);
+
+}
+
+
+
+/* ==========================================
+   BUTTONS
+==========================================*/
+
+body.light .btn-primary{
+
+    background:#111111;
+
+    color:#ffffff;
+
+}
+
+
+body.light .btn-secondary{
+
+    color:#111111;
+
+    border:1px solid rgba(0,0,0,.10);
+
+}
+
+
+
+/* ==========================================
+   CARDS
+==========================================*/
+
+body.light .card,
+body.light .about-card,
+body.light .service-card,
+body.light .contact-card{
+
+    background:#ffffff;
+
+    border:1px solid rgba(0,0,0,.08);
+
+}
+
+
+body.light .service-card__icon,
+body.light .contact-card__icon{
+
+    background:#F3F3F3;
+
+}
+
+
+body.light .service-card__icon svg,
+body.light .contact-card__icon svg{
+
+    stroke:#111111;
+
+}
+
+
+
+/* ==========================================
+   PORTFOLIO
+==========================================*/
+
+body.light .portfolio-card{
+
+    background:#EDEDED;
+
+}
+
+
+body.light .portfolio-card img{
+
+    filter:
+
+    brightness(.72)
+
+    saturate(.8)
+
+    blur(.4px);
+
+}
+
+
+body.light .portfolio-card:hover img{
+
+    filter:
+
+    brightness(1)
+
+    saturate(1)
+
+    blur(0);
+
+}
+
+
+
+/* ==========================================
+   FOOTER
+==========================================*/
+
+body.light .footer{
+
+    border-top:1px solid rgba(0,0,0,.08);
+
+}
+
+
+body.light .footer__credit{
+
+    color:#666666;
+
+}
+
+
+
+/* ==========================================
+   THEME TOGGLE
+==========================================*/
+
+body.light .theme-toggle{
+
+    background:#ffffff;
+
+    border:1px solid rgba(0,0,0,.08);
+
+}
+
+
+body.light .theme-toggle span{
+
+    border-color:#111111;
+
+}
+
+
+body.light .theme-toggle span::before{
+
+    background:#111111;
+
+}
+
+
+
 /* ==========================================
    TRANSITION
 ==========================================*/
@@ -2435,6 +2704,32 @@ body,
 ::-webkit-scrollbar-thumb:hover{
 
     background:#9A9A9A;
+
+}
+
+
+
+/* ==========================================
+   LIGHT MODE SCROLLBAR
+==========================================*/
+
+body.light::-webkit-scrollbar-track{
+
+    background:#F5F5F5;
+
+}
+
+
+body.light::-webkit-scrollbar-thumb{
+
+    background:#B6B6B6;
+
+}
+
+
+body.light::-webkit-scrollbar-thumb:hover{
+
+    background:#8A8A8A;
 
 }
 
@@ -3200,6 +3495,16 @@ button,
 .contact-card{
 
     border:1px solid rgba(255,255,255,.06);
+
+}
+
+
+body.light .card,
+body.light .about-card,
+body.light .service-card,
+body.light .contact-card{
+
+    border:1px solid rgba(0,0,0,.08);
 
 }
 
