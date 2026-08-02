@@ -3540,79 +3540,63 @@ body.light .contact-card{
         letter-spacing:.50em;
 
     }
-   /* =========================================================
-   PORTFOLIO CATEGORIES
-========================================================= */
+/* ==========================================
+   PORTFOLIO V2
+==========================================*/
 
 .portfolio-categories{
 
-    width:min(92%,1100px);
-
+    width:min(92%,420px);
     margin:60px auto 0;
 
-    display:grid;
+    display:flex;
+    flex-direction:column;
 
-    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-
-    gap:20px;
+    gap:18px;
 
 }
 
-
-
-/* =========================================================
-   CATEGORY BUTTON
-========================================================= */
-
 .portfolio-category{
-
-    position:relative;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
 
     width:100%;
 
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
     min-height:64px;
+    padding:18px 30px;
 
-    padding:18px 26px;
+    border-radius:20px;
 
-    border-radius:999px;
+    color:var(--color-text-secondary);
 
+    font-family:var(--font-fa);
+    font-size:1rem;
+    font-weight:500;
+
+    background:rgba(255,255,255,.02);
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+
+    position:relative;
     overflow:hidden;
 
     cursor:pointer;
 
-    user-select:none;
-
-    white-space:nowrap;
-
-    font-family:var(--font-fa);
-
-    font-size:.95rem;
-
-    font-weight:500;
-
-    color:var(--color-text-secondary);
-
-    background:rgba(255,255,255,.02);
-
-    border:1px solid rgba(255,255,255,.08);
-
-    backdrop-filter:blur(14px);
-
-    -webkit-backdrop-filter:blur(14px);
-
-    transition:all .35s cubic-bezier(.22,.61,.36,1);
+    transition:
+        transform .35s cubic-bezier(.22,.61,.36,1),
+        border-color .35s ease,
+        background .35s ease,
+        color .35s ease,
+        box-shadow .35s ease;
 
 }
 
 
-
-/* ---------- Shine Effect ---------- */
+/* Shine */
 
 .portfolio-category::before{
 
@@ -3621,44 +3605,35 @@ body.light .contact-card{
     position:absolute;
 
     top:0;
+    left:-130%;
 
-    left:-140%;
-
-    width:70%;
-
+    width:120%;
     height:100%;
 
-    background:linear-gradient(
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,.18),
+            transparent
+        );
 
-        90deg,
-
-        transparent,
-
-        rgba(255,255,255,.22),
-
-        transparent
-
-    );
-
-    transform:skewX(-25deg);
-
-    transition:.85s;
+    transition:left .75s ease;
 
 }
-
-
 
 .portfolio-category:hover::before{
 
-    left:160%;
+    left:130%;
 
 }
 
 
-
-/* ---------- Hover ---------- */
+/* Hover */
 
 .portfolio-category:hover{
+
+    transform:translateY(-4px);
 
     color:var(--color-white);
 
@@ -3666,37 +3641,26 @@ body.light .contact-card{
 
     background:rgba(255,255,255,.05);
 
-    transform:translateY(-4px);
-
-    box-shadow:0 14px 34px rgba(0,0,0,.18);
+    box-shadow:
+        0 18px 40px rgba(0,0,0,.18);
 
 }
 
 
-
-/* ---------- Active ---------- */
+/* Active */
 
 .portfolio-category.active{
 
-    color:var(--color-white);
+    color:var(--color-silver);
 
     border-color:var(--color-silver);
 
-    background:rgba(255,255,255,.08);
-
-    box-shadow:
-
-        0 0 0 1px rgba(255,255,255,.08),
-
-        0 16px 40px rgba(0,0,0,.18);
+    background:rgba(255,255,255,.06);
 
 }
 
 
-
-/* =========================================================
-   PORTFOLIO CONTENT
-========================================================= */
+/* View */
 
 #portfolio-view{
 
@@ -3707,72 +3671,51 @@ body.light .contact-card{
     min-height:420px;
 
     display:flex;
-
     align-items:center;
-
     justify-content:center;
 
 }
 
 
-
-/* =========================================================
-   EMPTY STATE
-========================================================= */
+/* Empty */
 
 .portfolio-empty{
 
     display:flex;
-
     flex-direction:column;
-
     align-items:center;
-
-    justify-content:center;
 
     gap:24px;
 
     text-align:center;
 
-    opacity:.95;
+    opacity:.9;
 
 }
-
-
 
 .portfolio-empty__icon{
 
     width:90px;
-
     height:90px;
 
     display:flex;
-
     align-items:center;
-
     justify-content:center;
 
     border-radius:50%;
 
     border:1px solid rgba(255,255,255,.08);
 
-    background:rgba(255,255,255,.02);
-
 }
-
-
 
 .portfolio-empty__icon svg{
 
     width:40px;
-
     height:40px;
 
     stroke:var(--color-silver);
 
 }
-
-
 
 .portfolio-empty h3{
 
@@ -3784,8 +3727,6 @@ body.light .contact-card{
 
 }
 
-
-
 .portfolio-empty p{
 
     max-width:420px;
@@ -3795,47 +3736,48 @@ body.light .contact-card{
 }
 
 
-
-/* =========================================================
-   TABLET
-========================================================= */
-
-@media (max-width:992px){
-
-    .portfolio-categories{
-
-        grid-template-columns:repeat(2,1fr);
-
-    }
-
-}
-
-
-
-/* =========================================================
+/* ==========================================
    MOBILE
-========================================================= */
+==========================================*/
 
 @media (max-width:768px){
 
     .portfolio-categories{
 
-        grid-template-columns:1fr;
+        width:100%;
+
+        display:flex;
+        flex-direction:row;
+
+        overflow-x:auto;
 
         gap:14px;
+
+        scrollbar-width:none;
+        -ms-overflow-style:none;
+
+        padding-bottom:10px;
+
+    }
+
+    .portfolio-categories::-webkit-scrollbar{
+
+        display:none;
 
     }
 
     .portfolio-category{
 
-        min-height:58px;
+        flex:0 0 auto;
 
-        font-size:.9rem;
+        width:auto;
+
+        min-width:220px;
 
     }
 
 }
 
-   /* ==========================================
-     END
-   =========================================================*/
+/* ==========================================
+   END
+==========================================*/
