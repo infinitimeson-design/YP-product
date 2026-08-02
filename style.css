@@ -3542,7 +3542,6 @@ body.light .contact-card{
     }
 
 }
-
 /* ==========================================
    PORTFOLIO V2
 ==========================================*/
@@ -3553,37 +3552,25 @@ body.light .contact-card{
 
     margin:60px auto 0;
 
-    display:flex;
+    display:grid;
 
-    gap:14px;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 
-    overflow-x:auto;
-
-    scrollbar-width:none;
-
-    -ms-overflow-style:none;
-
-    padding-bottom:10px;
-
-}
-
-.portfolio-categories::-webkit-scrollbar{
-
-    display:none;
+    gap:16px;
 
 }
 
 .portfolio-category{
 
-    flex:0 0 auto;
+    width:100%;
 
-    padding:16px 26px;
+    padding:18px 24px;
 
-    background:transparent;
+    background:rgba(255,255,255,.02);
 
     border:1px solid rgba(255,255,255,.08);
 
-    border-radius:999px;
+    border-radius:18px;
 
     color:var(--color-text-secondary);
 
@@ -3593,7 +3580,7 @@ body.light .contact-card{
 
     transition:.35s ease;
 
-    white-space:nowrap;
+    text-align:center;
 
 }
 
@@ -3603,6 +3590,8 @@ body.light .contact-card{
 
     border-color:rgba(255,255,255,.18);
 
+    background:rgba(255,255,255,.04);
+
 }
 
 .portfolio-category.active{
@@ -3610,6 +3599,8 @@ body.light .contact-card{
     color:var(--color-silver);
 
     border-color:var(--color-silver);
+
+    background:rgba(255,255,255,.05);
 
 }
 
@@ -3691,6 +3682,17 @@ body.light .contact-card{
 
 }
 
+@media (max-width:768px){
+
+    .portfolio-categories{
+
+        grid-template-columns:1fr;
+
+        gap:14px;
+
+    }
+
+}
 /* ==========================================
    END
 =========================================================*/
