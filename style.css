@@ -3540,125 +3540,302 @@ body.light .contact-card{
         letter-spacing:.50em;
 
     }
- /* ==========================================
-   PORTFOLIO GRID
-==========================================*/
+   /* =========================================================
+   PORTFOLIO CATEGORIES
+========================================================= */
 
-.portfolio-grid{
+.portfolio-categories{
 
     width:min(92%,1100px);
 
     margin:60px auto 0;
 
-    display:flex;
+    display:grid;
 
-    flex-direction:column;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
 
-    gap:50px;
+    gap:20px;
 
 }
 
 
-/* ==========================================
-   PORTFOLIO CARD
-==========================================*/
 
-.portfolio-card{
+/* =========================================================
+   CATEGORY BUTTON
+========================================================= */
+
+.portfolio-category{
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
 
     width:100%;
 
+    min-height:64px;
+
+    padding:18px 26px;
+
+    border-radius:999px;
+
     overflow:hidden;
 
-    border-radius:28px;
+    cursor:pointer;
+
+    user-select:none;
+
+    white-space:nowrap;
+
+    font-family:var(--font-fa);
+
+    font-size:.95rem;
+
+    font-weight:500;
+
+    color:var(--color-text-secondary);
+
+    background:rgba(255,255,255,.02);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(14px);
+
+    -webkit-backdrop-filter:blur(14px);
+
+    transition:all .35s cubic-bezier(.22,.61,.36,1);
+
+}
+
+
+
+/* ---------- Shine Effect ---------- */
+
+.portfolio-category::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-140%;
+
+    width:70%;
+
+    height:100%;
+
+    background:linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        rgba(255,255,255,.22),
+
+        transparent
+
+    );
+
+    transform:skewX(-25deg);
+
+    transition:.85s;
+
+}
+
+
+
+.portfolio-category:hover::before{
+
+    left:160%;
+
+}
+
+
+
+/* ---------- Hover ---------- */
+
+.portfolio-category:hover{
+
+    color:var(--color-white);
+
+    border-color:rgba(255,255,255,.18);
+
+    background:rgba(255,255,255,.05);
+
+    transform:translateY(-4px);
+
+    box-shadow:0 14px 34px rgba(0,0,0,.18);
+
+}
+
+
+
+/* ---------- Active ---------- */
+
+.portfolio-category.active{
+
+    color:var(--color-white);
+
+    border-color:var(--color-silver);
+
+    background:rgba(255,255,255,.08);
+
+    box-shadow:
+
+        0 0 0 1px rgba(255,255,255,.08),
+
+        0 16px 40px rgba(0,0,0,.18);
+
+}
+
+
+
+/* =========================================================
+   PORTFOLIO CONTENT
+========================================================= */
+
+#portfolio-view{
+
+    width:min(92%,1200px);
+
+    margin:70px auto 0;
+
+    min-height:420px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.portfolio-empty{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:24px;
+
+    text-align:center;
+
+    opacity:.95;
+
+}
+
+
+
+.portfolio-empty__icon{
+
+    width:90px;
+
+    height:90px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
 
     border:1px solid rgba(255,255,255,.08);
 
     background:rgba(255,255,255,.02);
 
-    backdrop-filter:blur(18px);
+}
 
-    -webkit-backdrop-filter:blur(18px);
 
-    transition:.45s ease;
+
+.portfolio-empty__icon svg{
+
+    width:40px;
+
+    height:40px;
+
+    stroke:var(--color-silver);
 
 }
 
 
-.portfolio-card img{
 
-    width:100%;
+.portfolio-empty h3{
 
-    height:auto;
+    color:var(--color-white);
 
-    display:block;
+    font-size:1.35rem;
 
-    object-fit:cover;
-
-    transition:.7s cubic-bezier(.22,.61,.36,1);
+    font-weight:500;
 
 }
 
 
-/* Hover Desktop */
 
-.portfolio-card:hover{
+.portfolio-empty p{
 
-    transform:translateY(-8px);
+    max-width:420px;
 
-    border-color:rgba(255,255,255,.18);
-
-    box-shadow:
-    0 25px 60px rgba(0,0,0,.35);
+    line-height:2;
 
 }
 
 
-.portfolio-card:hover img{
 
-    transform:scale(1.04);
+/* =========================================================
+   TABLET
+========================================================= */
 
-}
+@media (max-width:992px){
 
+    .portfolio-categories{
 
-/* ==========================================
-   DESKTOP
-==========================================*/
-
-@media (min-width:769px){
-
-    .portfolio-grid{
-
-        width:min(75%,1000px);
+        grid-template-columns:repeat(2,1fr);
 
     }
 
 }
 
 
-/* ==========================================
+
+/* =========================================================
    MOBILE
-==========================================*/
+========================================================= */
 
 @media (max-width:768px){
 
-    .portfolio-grid{
+    .portfolio-categories{
 
-        width:92%;
+        grid-template-columns:1fr;
 
-        gap:28px;
+        gap:14px;
 
     }
 
+    .portfolio-category{
 
-    .portfolio-card{
+        min-height:58px;
 
-        border-radius:20px;
+        font-size:.9rem;
 
     }
 
 }
 
-
-/* ==========================================
-   END
-==========================================*/
+   /* ==========================================
+     END
+   =========================================================*/
