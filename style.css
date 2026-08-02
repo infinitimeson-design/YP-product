@@ -3540,33 +3540,36 @@ body.light .contact-card{
         letter-spacing:.50em;
 
     }
-   /* =========================================================
-   PORTFOLIO CATEGORIES
-========================================================= */
+
+   /* ==========================================
+   PORTFOLIO V2
+==========================================*/
 
 .portfolio-categories{
 
-    width:min(92%,1100px);
+    width:min(92%,420px);
 
-    margin:60px auto 0;
+    margin:70px auto 0;
 
-    display:grid;
+    display:flex;
 
-    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    flex-direction:column;
 
-    gap:20px;
+    gap:18px;
 
 }
 
-
-
-/* =========================================================
-   CATEGORY BUTTON
-========================================================= */
+/* ---------------------------------- */
 
 .portfolio-category{
 
     position:relative;
+
+    overflow:hidden;
+
+    width:100%;
+
+    height:62px;
 
     display:flex;
 
@@ -3574,21 +3577,19 @@ body.light .contact-card{
 
     justify-content:center;
 
-    width:100%;
-
-    min-height:64px;
-
-    padding:18px 26px;
+    padding:0 28px;
 
     border-radius:999px;
 
-    overflow:hidden;
+    border:1px solid rgba(255,255,255,.08);
 
-    cursor:pointer;
+    background:rgba(255,255,255,.02);
 
-    user-select:none;
+    backdrop-filter:blur(18px);
 
-    white-space:nowrap;
+    -webkit-backdrop-filter:blur(18px);
+
+    color:var(--color-text-secondary);
 
     font-family:var(--font-fa);
 
@@ -3596,23 +3597,13 @@ body.light .contact-card{
 
     font-weight:500;
 
-    color:var(--color-text-secondary);
+    cursor:pointer;
 
-    background:rgba(255,255,255,.02);
-
-    border:1px solid rgba(255,255,255,.08);
-
-    backdrop-filter:blur(14px);
-
-    -webkit-backdrop-filter:blur(14px);
-
-    transition:all .35s cubic-bezier(.22,.61,.36,1);
+    transition:.35s cubic-bezier(.22,.61,.36,1);
 
 }
 
-
-
-/* ---------- Shine Effect ---------- */
+/* ---------------------------------- */
 
 .portfolio-category::before{
 
@@ -3622,41 +3613,31 @@ body.light .contact-card{
 
     top:0;
 
-    left:-140%;
+    left:-120%;
 
-    width:70%;
+    width:100%;
 
     height:100%;
 
-    background:linear-gradient(
+    background:
+
+    linear-gradient(
 
         90deg,
 
         transparent,
 
-        rgba(255,255,255,.22),
+        rgba(255,255,255,.18),
 
         transparent
 
     );
 
-    transform:skewX(-25deg);
-
-    transition:.85s;
+    transition:.75s;
 
 }
 
-
-
-.portfolio-category:hover::before{
-
-    left:160%;
-
-}
-
-
-
-/* ---------- Hover ---------- */
+/* ---------------------------------- */
 
 .portfolio-category:hover{
 
@@ -3664,39 +3645,31 @@ body.light .contact-card{
 
     border-color:rgba(255,255,255,.18);
 
-    background:rgba(255,255,255,.05);
+    background:rgba(255,255,255,.04);
 
-    transform:translateY(-4px);
-
-    box-shadow:0 14px 34px rgba(0,0,0,.18);
+    transform:translateY(-3px);
 
 }
 
+.portfolio-category:hover::before{
 
+    left:120%;
 
-/* ---------- Active ---------- */
+}
+
+/* ---------------------------------- */
 
 .portfolio-category.active{
 
-    color:var(--color-white);
+    color:var(--color-silver);
 
     border-color:var(--color-silver);
 
-    background:rgba(255,255,255,.08);
-
-    box-shadow:
-
-        0 0 0 1px rgba(255,255,255,.08),
-
-        0 16px 40px rgba(0,0,0,.18);
+    background:rgba(255,255,255,.05);
 
 }
 
-
-
-/* =========================================================
-   PORTFOLIO CONTENT
-========================================================= */
+/* ---------------------------------- */
 
 #portfolio-view{
 
@@ -3714,11 +3687,7 @@ body.light .contact-card{
 
 }
 
-
-
-/* =========================================================
-   EMPTY STATE
-========================================================= */
+/* ---------------------------------- */
 
 .portfolio-empty{
 
@@ -3728,17 +3697,13 @@ body.light .contact-card{
 
     align-items:center;
 
-    justify-content:center;
-
     gap:24px;
 
     text-align:center;
 
-    opacity:.95;
+    opacity:.9;
 
 }
-
-
 
 .portfolio-empty__icon{
 
@@ -3756,11 +3721,7 @@ body.light .contact-card{
 
     border:1px solid rgba(255,255,255,.08);
 
-    background:rgba(255,255,255,.02);
-
 }
-
-
 
 .portfolio-empty__icon svg{
 
@@ -3772,8 +3733,6 @@ body.light .contact-card{
 
 }
 
-
-
 .portfolio-empty h3{
 
     color:var(--color-white);
@@ -3784,8 +3743,6 @@ body.light .contact-card{
 
 }
 
-
-
 .portfolio-empty p{
 
     max-width:420px;
@@ -3794,33 +3751,15 @@ body.light .contact-card{
 
 }
 
-
-
-/* =========================================================
-   TABLET
-========================================================= */
-
-@media (max-width:992px){
-
-    .portfolio-categories{
-
-        grid-template-columns:repeat(2,1fr);
-
-    }
-
-}
-
-
-
-/* =========================================================
+/* ==========================================
    MOBILE
-========================================================= */
+==========================================*/
 
 @media (max-width:768px){
 
     .portfolio-categories{
 
-        grid-template-columns:1fr;
+        width:100%;
 
         gap:14px;
 
@@ -3828,14 +3767,11 @@ body.light .contact-card{
 
     .portfolio-category{
 
-        min-height:58px;
+        height:58px;
 
         font-size:.9rem;
 
     }
 
 }
-
-   /* ==========================================
-     END
-   =========================================================*/
+   
