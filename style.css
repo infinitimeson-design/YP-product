@@ -3540,11 +3540,9 @@ body.light .contact-card{
         letter-spacing:.50em;
 
     }
-
-}
-/* ==========================================
-   PORTFOLIO V2
-==========================================*/
+   /* =========================================================
+   PORTFOLIO CATEGORIES
+========================================================= */
 
 .portfolio-categories{
 
@@ -3554,35 +3552,111 @@ body.light .contact-card{
 
     display:grid;
 
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
 
-    gap:16px;
+    gap:20px;
 
 }
 
+
+
+/* =========================================================
+   CATEGORY BUTTON
+========================================================= */
+
 .portfolio-category{
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
 
     width:100%;
 
-    padding:18px 24px;
+    min-height:64px;
+
+    padding:18px 26px;
+
+    border-radius:999px;
+
+    overflow:hidden;
+
+    cursor:pointer;
+
+    user-select:none;
+
+    white-space:nowrap;
+
+    font-family:var(--font-fa);
+
+    font-size:.95rem;
+
+    font-weight:500;
+
+    color:var(--color-text-secondary);
 
     background:rgba(255,255,255,.02);
 
     border:1px solid rgba(255,255,255,.08);
 
-    border-radius:18px;
+    backdrop-filter:blur(14px);
 
-    color:var(--color-text-secondary);
+    -webkit-backdrop-filter:blur(14px);
 
-    font:inherit;
-
-    cursor:pointer;
-
-    transition:.35s ease;
-
-    text-align:center;
+    transition:all .35s cubic-bezier(.22,.61,.36,1);
 
 }
+
+
+
+/* ---------- Shine Effect ---------- */
+
+.portfolio-category::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-140%;
+
+    width:70%;
+
+    height:100%;
+
+    background:linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        rgba(255,255,255,.22),
+
+        transparent
+
+    );
+
+    transform:skewX(-25deg);
+
+    transition:.85s;
+
+}
+
+
+
+.portfolio-category:hover::before{
+
+    left:160%;
+
+}
+
+
+
+/* ---------- Hover ---------- */
 
 .portfolio-category:hover{
 
@@ -3590,19 +3664,39 @@ body.light .contact-card{
 
     border-color:rgba(255,255,255,.18);
 
-    background:rgba(255,255,255,.04);
+    background:rgba(255,255,255,.05);
+
+    transform:translateY(-4px);
+
+    box-shadow:0 14px 34px rgba(0,0,0,.18);
 
 }
+
+
+
+/* ---------- Active ---------- */
 
 .portfolio-category.active{
 
-    color:var(--color-silver);
+    color:var(--color-white);
 
     border-color:var(--color-silver);
 
-    background:rgba(255,255,255,.05);
+    background:rgba(255,255,255,.08);
+
+    box-shadow:
+
+        0 0 0 1px rgba(255,255,255,.08),
+
+        0 16px 40px rgba(0,0,0,.18);
 
 }
+
+
+
+/* =========================================================
+   PORTFOLIO CONTENT
+========================================================= */
 
 #portfolio-view{
 
@@ -3620,6 +3714,12 @@ body.light .contact-card{
 
 }
 
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
 .portfolio-empty{
 
     display:flex;
@@ -3628,13 +3728,17 @@ body.light .contact-card{
 
     align-items:center;
 
+    justify-content:center;
+
     gap:24px;
 
     text-align:center;
 
-    opacity:.9;
+    opacity:.95;
 
 }
+
+
 
 .portfolio-empty__icon{
 
@@ -3652,7 +3756,11 @@ body.light .contact-card{
 
     border:1px solid rgba(255,255,255,.08);
 
+    background:rgba(255,255,255,.02);
+
 }
+
+
 
 .portfolio-empty__icon svg{
 
@@ -3664,6 +3772,8 @@ body.light .contact-card{
 
 }
 
+
+
 .portfolio-empty h3{
 
     color:var(--color-white);
@@ -3674,6 +3784,8 @@ body.light .contact-card{
 
 }
 
+
+
 .portfolio-empty p{
 
     max-width:420px;
@@ -3681,6 +3793,28 @@ body.light .contact-card{
     line-height:2;
 
 }
+
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width:992px){
+
+    .portfolio-categories{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
 
 @media (max-width:768px){
 
@@ -3692,7 +3826,16 @@ body.light .contact-card{
 
     }
 
+    .portfolio-category{
+
+        min-height:58px;
+
+        font-size:.9rem;
+
+    }
+
 }
-/* ==========================================
-   END
-=========================================================*/
+
+   /* ==========================================
+     END
+   =========================================================*/
