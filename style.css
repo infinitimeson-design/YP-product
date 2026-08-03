@@ -3541,9 +3541,11 @@ body.light .contact-card{
 
     }
 
-   /* ==========================================
+ /* ==========================================
    PORTFOLIO V2
 ==========================================*/
+
+/* ===== Desktop ===== */
 
 .portfolio-categories{
 
@@ -3552,29 +3554,22 @@ body.light .contact-card{
     margin:70px auto 0;
 
     display:flex;
-
     flex-direction:column;
 
     gap:18px;
 
 }
 
-/* ---------------------------------- */
-
 .portfolio-category{
 
     position:relative;
-
     overflow:hidden;
 
     width:100%;
-
     height:62px;
 
     display:flex;
-
     align-items:center;
-
     justify-content:center;
 
     padding:0 28px;
@@ -3582,28 +3577,27 @@ body.light .contact-card{
     border-radius:999px;
 
     border:1px solid rgba(255,255,255,.08);
-
     background:rgba(255,255,255,.02);
 
     backdrop-filter:blur(18px);
-
     -webkit-backdrop-filter:blur(18px);
 
     color:var(--color-text-secondary);
 
     font-family:var(--font-fa);
-
     font-size:.95rem;
-
     font-weight:500;
 
     cursor:pointer;
 
-    transition:.35s cubic-bezier(.22,.61,.36,1);
+    transition:
+        transform .35s cubic-bezier(.22,.61,.36,1),
+        background .35s ease,
+        border-color .35s ease,
+        color .35s ease,
+        box-shadow .35s ease;
 
 }
-
-/* ---------------------------------- */
 
 .portfolio-category::before{
 
@@ -3611,43 +3605,19 @@ body.light .contact-card{
 
     position:absolute;
 
-    top:0;
+    inset:0;
 
     left:-120%;
 
-    width:100%;
-
-    height:100%;
-
     background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,.18),
+            transparent
+        );
 
-    linear-gradient(
-
-        90deg,
-
-        transparent,
-
-        rgba(255,255,255,.18),
-
-        transparent
-
-    );
-
-    transition:.75s;
-
-}
-
-/* ---------------------------------- */
-
-.portfolio-category:hover{
-
-    color:var(--color-white);
-
-    border-color:rgba(255,255,255,.18);
-
-    background:rgba(255,255,255,.04);
-
-    transform:translateY(-3px);
+    transition:left .8s ease;
 
 }
 
@@ -3657,7 +3627,19 @@ body.light .contact-card{
 
 }
 
-/* ---------------------------------- */
+.portfolio-category:hover{
+
+    transform:translateY(-3px);
+
+    color:var(--color-white);
+
+    background:rgba(255,255,255,.04);
+
+    border-color:rgba(255,255,255,.18);
+
+    box-shadow:0 18px 40px rgba(0,0,0,.18);
+
+}
 
 .portfolio-category.active{
 
@@ -3665,11 +3647,11 @@ body.light .contact-card{
 
     border-color:var(--color-silver);
 
-    background:rgba(255,255,255,.05);
+    background:rgba(255,255,255,.06);
 
 }
 
-/* ---------------------------------- */
+/* ===== Portfolio View ===== */
 
 #portfolio-view{
 
@@ -3680,21 +3662,15 @@ body.light .contact-card{
     min-height:420px;
 
     display:flex;
-
     align-items:center;
-
     justify-content:center;
 
 }
 
-/* ---------------------------------- */
-
 .portfolio-empty{
 
     display:flex;
-
     flex-direction:column;
-
     align-items:center;
 
     gap:24px;
@@ -3708,13 +3684,10 @@ body.light .contact-card{
 .portfolio-empty__icon{
 
     width:90px;
-
     height:90px;
 
     display:flex;
-
     align-items:center;
-
     justify-content:center;
 
     border-radius:50%;
@@ -3726,7 +3699,6 @@ body.light .contact-card{
 .portfolio-empty__icon svg{
 
     width:40px;
-
     height:40px;
 
     stroke:var(--color-silver);
@@ -3759,24 +3731,25 @@ body.light .contact-card{
 
     .portfolio-categories{
 
-        width:min(92%,100%);
+        width:100%;
+
+        margin:50px 0 0;
+
+        padding-inline:18px;
 
         display:flex;
-
         flex-direction:row;
-
         flex-wrap:nowrap;
 
         gap:14px;
 
         overflow-x:auto;
-
         overflow-y:hidden;
 
-        padding-bottom:10px;
+        justify-content:flex-start;
+        align-items:center;
 
         scrollbar-width:none;
-
         -ms-overflow-style:none;
 
     }
@@ -3792,12 +3765,13 @@ body.light .contact-card{
         flex:0 0 auto;
 
         width:auto;
+        min-width:max-content;
 
-        min-width:180px;
+        height:56px;
 
-        min-height:58px;
+        padding:0 24px;
 
-        padding:16px 24px;
+        white-space:nowrap;
 
         font-size:.9rem;
 
