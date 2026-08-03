@@ -1,10 +1,5 @@
 /* =========================================================
-   YP PRODUCT
-   STYLE.CSS
-========================================================= */
-
-
-/* =========================================================
+   YP PRODUCT========================================
    RESET
 ========================================================= */
 
@@ -3725,28 +3720,43 @@ body.light .contact-card{
 /* ==========================================
    MOBILE
 ==========================================*/
+/* --- پروتکل نجات برای تست نهایی --- */
 @media (max-width: 768px) {
+    /* کانتینر اصلی رو با زور بازو فعال می‌کنیم */
+    .portfolio-categories {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        overflow-y: visible !important;
+        width: 100% !important;
+        min-height: 80px !important;
+        padding: 20px 15px !important;
+        gap: 15px !important;
+        appearance: none !important;
+        -webkit-appearance: none !important;
+    }
+
+    /* خودِ دکمه رو با استایلِ بسیار ساده و خشن تست می‌کنیم */
     .portfolio-category {
-        /* برای تست، اول از همه بک‌گراند رو ثابت و غیر شیشه‌ای می‌کنیم که ببینیم دکمه کجاست */
-        background: rgba(255, 255, 255, 0.15) !important;
-        border: 1px solid rgba(255, 255, 255, 0.3) !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        flex: 0 0 auto !important;
+        min-width: 150px !important;
+        min-height: 50px !important;
         
-        /* رنگ متن رو سفیدِ خالص می‌کنیم که مطمئن شیم دیده میشه */
-        color: #ffffff !important; 
+        /* استفاده از رنگ‌های تخت و ساده برای رد کردن احتمال باگ شیشه‌ای */
+        background-color: #ff0000 !important; /* قرمز جیغ برای تست! */
+        color: #ffffff !important;
+        border: 3px solid #000000 !important;
         
-        flex: 0 0 auto;
-        padding: 12px 24px;
-        margin-right: 10px; /* یه فاصله کوچیک بینشون */
-        
-        /* غیرفعال کردن موقتِ بک‌دراپ که شاید تو موبایل باگ داره */
-        backdrop-filter: none !important;
-        -webkit-backdrop-filter: none !important;
-        
-        /* مطمئن شیم ارتفاعش درسته */
-        height: 50px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 999px;
+        padding: 10px 20px !important;
+        margin: 0 !important;
+        text-decoration: none !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        position: relative !important;
+        z-index: 9999 !important;
     }
 }
