@@ -1,3 +1,18 @@
+/* این کد برای تست است - اگر کار کند کل صفحه بنفش می‌شود */
+body {
+    background-color: purple !important;
+}
+
+/* این کد برای تست Media Query است - اگر کار کند در موبایل صفحه نارنجی می‌شود */
+@media (max-width: 768px) {
+    body {
+        background-color: orange !important;
+    }
+}
+
+
+
+
 /* =========================================================
    YP PRODUCT========================================
    RESET
