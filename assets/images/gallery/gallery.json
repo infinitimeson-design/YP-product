@@ -24,7 +24,9 @@
   "industrial": {
     "title": "عکاسی صنعتی و زمینه سفید",
     "folder": "industrial",
-    "images": []
+    "images": [
+      "01.jpg"
+    ]
   },
 
   "birthday": {
