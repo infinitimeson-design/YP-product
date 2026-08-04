@@ -1,45 +1,39 @@
-/* استایل نهایی و تمیز برای بخش Portfolio در موبایل */
 @media (max-width: 768px) {
-    /* چیدمان دکمه‌ها: افقی و بدون شکستن خط */
+    /* والد دکمه‌ها - چیدمان ستونی و استاندارد */
     .portfolio-categories {
         display: flex !important;
-        flex-direction: row !important;
-        overflow-x: auto !important; /* اسکرول افقی برای موبایل */
-        white-space: nowrap !important; /* جلوگیری از رفتن دکمه به خط بعد */
-        padding: 15px 10px !important;
-        gap: 12px !important;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: none; /* مخفی کردن اسکرول‌بار در فایرفاکس */
+        flex-direction: column !important; /* دکمه‌ها زیر هم قرار بگیرند */
+        align-items: center !important;    /* دکمه‌ها در مرکز قرار بگیرند */
+        gap: 15px !important;               /* فاصله بین دکمه‌ها */
+        width: 100% !important;
+        padding: 20px 0 !important;
     }
 
-    /* مخفی کردن اسکرول‌بار در کروم و سافاری */
-    .portfolio-categories::-webkit-scrollbar {
-        display: none;
-    }
-
-    /* استایل دکمه‌ها با تم YP (سبز زیتونی و نقره‌ای) */
+    /* استایل دکمه‌ها - بازگرداندن استایل اصلی و کامل */
     .portfolio-category {
         display: flex !important;
-        flex: 0 0 auto !important; /* دکمه‌ها فشرده نمی‌شن */
-        min-width: 130px !important;
-        padding: 10px 20px !important;
-        
-        /* رنگ و بافت شیشه‌ای با تم برند شما */
-        background: rgba(47, 54, 38, 0.6) !important; /* سبز زیتونی تیره با شفافیت */
-        backdrop-filter: blur(8px) !important;
-        -webkit-backdrop-filter: blur(8px) !important;
-        
-        /* حاشیه نقره‌ای مات */
-        border: 1px solid rgba(192, 192, 192, 0.3) !important; 
-        border-radius: 8px !important;
-        
-        color: #e0e0e0 !important; /* متن نقره‌ای روشن */
-        font-size: 14px !important;
+        width: 90% !important;             /* دکمه‌ها تقریباً تمام عرض را بگیرند تا خوش‌فرم باشند */
+        max-width: 300px !important;       /* اما خیلی بزرگ نشوند */
+        min-height: 50px !important;       /* ارتفاع مناسب برای لمس راحت */
+        padding: 12px 20px !important;
         justify-content: center !important;
         align-items: center !important;
+        
+        /* بازگرداندن ظاهر شیشه‌ای و کامل */
+        background: rgba(255, 255, 255, 0.1) !important; 
+        backdrop-filter: blur(10px) !important;
+        -webkit-backdrop-filter: blur(10px) !important;
+        
+        border: 1px solid rgba(255, 255, 255, 0.2) !important;
+        border-radius: 12px !important;
+        
+        color: white !important;
+        text-align: center !important;
+        
+        /* حذف هرگونه محدودیت عرضی که باعث می‌شد دکمه‌ها کوچک به نظر بیان */
+        flex: 0 0 auto !important;
     }
 }
-
 
 ================================================
    RESET
