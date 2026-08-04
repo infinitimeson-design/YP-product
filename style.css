@@ -1,4 +1,10 @@
-================================================
+/* =========================================================
+   YP PRODUCT
+   STYLE.CSS
+========================================================= */
+
+
+/* =========================================================
    RESET
 ========================================================= */
 
@@ -307,7 +313,7 @@ p{
 
     font-size:clamp(2rem,4vw,3.6rem);
 
-    color:#BFC5C9;
+    color:var(--color-gold);
 
     margin-bottom:24px;
 
@@ -375,15 +381,11 @@ p{
 
 .btn-primary{
 
-    border:1px solid var(--color-border);
+    background:var(--color-white);
 
-    color:var(--color-white);
+    color:var(--color-black);
 
-    background:transparent;
-
-    backdrop-filter:blur(10px);
-
-    -webkit-backdrop-filter:blur(10px);
+    box-shadow:var(--shadow-soft);
 
 }
 
@@ -391,7 +393,7 @@ p{
 
     transform:translateY(-3px);
 
-    border-color:rgba(255,255,255,.18);
+    box-shadow:var(--shadow-hover);
 
 }
 
@@ -1018,8 +1020,8 @@ p{
 
     line-height:1.15;
 
-    color:#BFC5C9;
-   
+    color:var(--color-gold);
+
     margin-bottom:36px;
 
 }
@@ -1218,7 +1220,7 @@ p{
 
 }
 
-/* =======================================================
+/* =========================================================
    PORTFOLIO
 =========================================================*/
 
@@ -3240,228 +3242,9 @@ body.light .contact-card{
         letter-spacing:.50em;
 
     }
-/* ==========================================
-   PORTFOLIO V2
-==========================================*/
-
-.portfolio-categories{
-
-    width:min(92%,420px);
-
-    margin:70px auto 0;
-
-    display:flex;
-    flex-direction:column;
-
-    gap:18px;
-
-}
-
-.portfolio-category{
-
-    position:relative;
-    overflow:hidden;
-
-    width:100%;
-    min-height:62px;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    padding:18px 28px;
-
-    border-radius:999px;
-
-    border:1px solid rgba(255,255,255,.08);
-
-    background:rgba(255,255,255,.02);
-
-    backdrop-filter:blur(18px);
-    -webkit-backdrop-filter:blur(18px);
-
-    color:var(--color-text-secondary);
-
-    font-family:var(--font-fa);
-    font-size:.95rem;
-    font-weight:500;
-
-    cursor:pointer;
-
-    transition:
-        transform .35s cubic-bezier(.22,.61,.36,1),
-        border-color .35s ease,
-        background .35s ease,
-        color .35s ease,
-        box-shadow .35s ease;
-
-}
-
-.portfolio-category::before{
-
-    content:"";
-
-    position:absolute;
-
-    top:0;
-    left:-120%;
-
-    width:100%;
-    height:100%;
-
-    background:
-        linear-gradient(
-            90deg,
-            transparent,
-            rgba(255,255,255,.18),
-            transparent
-        );
-
-    transition:left .75s ease;
-
-}
-
-.portfolio-category:hover{
-
-    color:var(--color-white);
-
-    border-color:rgba(255,255,255,.18);
-
-    background:rgba(255,255,255,.05);
-
-    transform:translateY(-4px);
-
-    box-shadow:
-        0 16px 36px rgba(0,0,0,.20);
-
-}
-
-.portfolio-category:hover::before{
-
-    left:120%;
-
-}
-
-.portfolio-category.active{
-
-    color:var(--color-silver);
-
-    border-color:var(--color-silver);
-
-    background:rgba(255,255,255,.06);
-
-}
-
-#portfolio-view{
-
-    width:min(92%,1200px);
-
-    margin:70px auto 0;
-
-    min-height:420px;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-}
-
-.portfolio-empty{
-
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-
-    gap:24px;
-
-    text-align:center;
-
-    opacity:.9;
-
-}
-
-.portfolio-empty__icon{
-
-    width:90px;
-    height:90px;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    border-radius:50%;
-
-    border:1px solid rgba(255,255,255,.08);
-
-}
-
-.portfolio-empty__icon svg{
-
-    width:40px;
-    height:40px;
-
-    stroke:var(--color-silver);
-
-}
-
-.portfolio-empty h3{
-
-    color:var(--color-white);
-
-    font-size:1.35rem;
-
-    font-weight:500;
-
-}
-
-.portfolio-empty p{
-
-    max-width:420px;
-
-    line-height:2;
 
 }
 
 /* ==========================================
-   MOBILE
-==========================================*/
-/* --- پروتکل نجات برای تست نهایی --- */
-@media (max-width: 768px) {
-    /* کانتینر اصلی رو با زور بازو فعال می‌کنیم */
-    .portfolio-categories {
-        display: flex !important;
-        flex-direction: row !important;
-        flex-wrap: nowrap !important;
-        overflow-x: auto !important;
-        overflow-y: visible !important;
-        width: 100% !important;
-        min-height: 80px !important;
-        padding: 20px 15px !important;
-        gap: 15px !important;
-        appearance: none !important;
-        -webkit-appearance: none !important;
-    }
-
-    /* خودِ دکمه رو با استایلِ بسیار ساده و خشن تست می‌کنیم */
-    .portfolio-category {
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        flex: 0 0 auto !important;
-        min-width: 150px !important;
-        min-height: 50px !important;
-        
-        /* استفاده از رنگ‌های تخت و ساده برای رد کردن احتمال باگ شیشه‌ای */
-        background-color: #ff0000 !important; /* قرمز جیغ برای تست! */
-        color: #ffffff !important;
-        border: 3px solid #000000 !important;
-        
-        padding: 10px 20px !important;
-        margin: 0 !important;
-        text-decoration: none !important;
-        visibility: visible !important;
-        opacity: 1 !important;
-        position: relative !important;
-        z-index: 9999 !important;
-    }
-}
+   END
+=========================================================*/
