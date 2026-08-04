@@ -93,8 +93,6 @@ ol{
 
     --color-surface:#151A10;
 
-    --color-surface-light:#1C2215;
-
     --color-white:#F7F7F5;
 
     --color-text: #D7D1C4;
@@ -106,11 +104,6 @@ ol{
     --color-border:rgba(255,255,255,.08);
    
     --color-overlay:rgba(0,0,0,.45);
-
-    --color-gold:rgba(168,131,42,1);
-
-
-
 
     /* ---------- BACKGROUND ---------- */
 
@@ -1811,246 +1804,6 @@ p{
    
 }
 
-/* =========================================================
-   THEME SYSTEM
-   LIGHT MODE
-==========================================*/
-
-body.light{
-
-    --background:#EDE5D8;
-
-    --color-black:#111111;
-
-    --color-surface:#E8DFD0;
-
-    --color-surface-light:#E2D8C8;
-
-    --color-white:#111111;
-
-    --color-text:#4B4338;
-   
-    --color-text-secondary:#7B7266;
-
-    --color-silver:#7A7A7A;
-
-    --color-border:rgba(0,0,0,.08);
-
-    --color-overlay:rgba(255,255,255,.35);
-
-    --color-gold:rgba(139,106,31,1);
-
-
-}
-
-
-
-/* ==========================================
-   BODY
-==========================================*/
-
-body.light{
-
-    background:var(--background);
-
-    color:var(--color-text);
-
-}
-
-
-
-/* ==========================================
-   NAVBAR
-==========================================*/
-
-body.light .navbar{
-
-    background:rgba(237,229,216,.82);
-
-    border-bottom:1px solid rgba(75,67,56,.08);
-
-}
-
-
-body.light .navbar.scrolled{
-
-    background:rgba(237,229,216,.95);
-
-}
-
-
-/* ==========================================
-   TEXT
-==========================================*/
-
-body.light p{
-
-    color:var(--color-text-secondary);
-
-}
-
-
-body.light h1,
-body.light h2,
-body.light h3,
-body.light h4,
-body.light h5,
-body.light h6{
-
-    color:var(--color-text);
-
-}
-
-
-body.light .section-header__eyebrow{
-
-    color:var(--color-silver);
-
-}
-
-
-
-/* ==========================================
-   BUTTONS
-==========================================*/
-
-body.light .btn-primary{
-
-    background:#111111;
-
-    color:#ffffff;
-
-}
-
-
-body.light .btn-secondary{
-
-    color:#111111;
-
-    border:1px solid rgba(0,0,0,.10);
-
-}
-
-
-
-/* ==========================================
-   CARDS
-==========================================*/
-
-body.light .card,
-body.light .about-card,
-body.light .service-card,
-body.light .contact-card{
-
-    background:#ffffff;
-
-    border:1px solid rgba(0,0,0,.08);
-
-}
-
-
-body.light .service-card__icon,
-body.light .contact-card__icon{
-
-    background:#F3F3F3;
-
-}
-
-
-body.light .service-card__icon svg,
-body.light .contact-card__icon svg{
-
-    stroke:#111111;
-
-}
-
-
-
-/* ==========================================
-   PORTFOLIO
-==========================================*/
-
-body.light .portfolio-card{
-
-    background:#EDEDED;
-
-}
-
-
-body.light .portfolio-card img{
-
-    filter:
-
-    brightness(.72)
-
-    saturate(.8)
-
-    blur(.4px);
-
-}
-
-
-body.light .portfolio-card:hover img{
-
-    filter:
-
-    brightness(1)
-
-    saturate(1)
-
-    blur(0);
-
-}
-
-
-
-/* ==========================================
-   FOOTER
-==========================================*/
-
-body.light .footer{
-
-    border-top:1px solid rgba(0,0,0,.08);
-
-}
-
-
-body.light .footer__credit{
-
-    color:#666666;
-
-}
-
-
-
-/* ==========================================
-   THEME TOGGLE
-==========================================*/
-
-body.light .theme-toggle{
-
-    background:#ffffff;
-
-    border:1px solid rgba(0,0,0,.08);
-
-}
-
-
-body.light .theme-toggle span{
-
-    border-color:#111111;
-
-}
-
-
-body.light .theme-toggle span::before{
-
-    background:#111111;
-
-}
-
-
-
 /* ==========================================
    TRANSITION
 ==========================================*/
@@ -2414,32 +2167,6 @@ body,
 ::-webkit-scrollbar-thumb:hover{
 
     background:#9A9A9A;
-
-}
-
-
-
-/* ==========================================
-   LIGHT MODE SCROLLBAR
-==========================================*/
-
-body.light::-webkit-scrollbar-track{
-
-    background:#F5F5F5;
-
-}
-
-
-body.light::-webkit-scrollbar-thumb{
-
-    background:#B6B6B6;
-
-}
-
-
-body.light::-webkit-scrollbar-thumb:hover{
-
-    background:#8A8A8A;
 
 }
 
@@ -3208,17 +2935,6 @@ button,
 
 }
 
-
-body.light .card,
-body.light .about-card,
-body.light .service-card,
-body.light .contact-card{
-
-    border:1px solid rgba(0,0,0,.08);
-
-}
-
-
 /* ==========================================
    GPU
 ==========================================*/
@@ -3231,29 +2947,15 @@ body.light .contact-card{
 
 }
 
-/* ==========================================
-   DESKTOP NAV SIZE
-==========================================*/
 
-@media (min-width:1024px){
-
-    .nav-links a{
-
-        font-size:120px;
-
-        font-weight:600;
-
-        letter-spacing:.50em;
-
-    }
    /* =========================================================
    PORTFOLIO CATEGORIES
 ========================================================= */
 
 .portfolio-categories{
 
-    width:min(92%,1100px);
-
+    width:92%;
+   
     margin:60px auto 0;
 
     display:grid;
@@ -3526,22 +3228,51 @@ body.light .contact-card{
 
     .portfolio-categories{
 
+        width:100%;
+
+        padding-inline:24px;
+
         grid-template-columns:1fr;
 
-        gap:14px;
+        gap:16px;
 
     }
 
+
     .portfolio-category{
+
+        width:100%;
 
         min-height:58px;
 
+        padding:16px 24px;
+
         font-size:.9rem;
+
+        border-radius:999px;
+
+        background:rgba(255,255,255,.04);
+
+        border:1px solid rgba(255,255,255,.12);
+
+        backdrop-filter:blur(18px);
+
+        -webkit-backdrop-filter:blur(18px);
+
+    }
+
+
+    .portfolio-category:hover{
+
+        transform:translateY(-3px);
+
+        background:rgba(255,255,255,.08);
+
+        border-color:rgba(255,255,255,.25);
 
     }
 
 }
-
    /* ==========================================
      END
    =========================================================*/
