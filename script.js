@@ -370,6 +370,146 @@ console.log("%cYP Product",
 console.log("%cDesigned & Developed by Sicily Design",
 "color:#888;font-size:12px;");
 
+console.log("%cDesigned & Developed by Sicily Design",
+"color:#888;font-size:12px;");
+
+
+/* ==========================================================
+   PART 5
+   Dynamic Portfolio
+========================================================== */
+
+/* ==========================================================
+   PORTFOLIO DYNAMIC GALLERY
+========================================================== */
+
+const portfolioButtons = document.querySelectorAll(".portfolio-category");
+const portfolioView = document.getElementById("portfolio-view");
+
+let gallery = {};
+
+/* -------------------- */
+
+async function loadGallery() {
+
+    try {
+
+        const response = await fetch("assets/images/gallery/gallery.json");
+
+        gallery = await response.json();
+
+    } catch (error) {
+
+        console.error("Gallery JSON Error", error);
+
+    }
+
+}
+
+/* -------------------- */
+
+function renderCategory(category) {
+
+    const data = gallery[category];
+
+    if (!data) return;
+
+    if (!data.images.length) {
+
+        portfolioView.innerHTML = `
+        <div class="portfolio-empty">
+
+            <div class="portfolio-empty__icon">
+
+                <svg viewBox="0 0 24 24"
+                     fill="none">
+
+                    <rect x="3" y="5"
+                          width="18"
+                          height="14"
+                          rx="2"
+                          stroke="currentColor"
+                          stroke-width="1.5"/>
+
+                    <circle cx="12"
+                            cy="12"
+                            r="3"
+                            stroke="currentColor"
+                            stroke-width="1.5"/>
+
+                </svg>
+
+            </div>
+
+            <h3>به زودی...</h3>
+
+            <p>
+
+                نمونه‌کارهای این بخش
+                به زودی اضافه می‌شوند.
+
+            </p>
+
+        </div>
+        `;
+
+        return;
+
+    }
+
+    let html = `<div class="portfolio-gallery">`;
+
+    data.images.forEach(image => {
+
+        html += `
+
+        <figure class="portfolio-image">
+
+            <img
+                src="assets/images/gallery/${data.folder}/${image}"
+                alt="${data.title}"
+                loading="lazy">
+
+        </figure>
+
+        `;
+
+    });
+
+    html += `</div>`;
+
+    portfolioView.innerHTML = html;
+
+}
+
+/* -------------------- */
+
+portfolioButtons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        portfolioButtons.forEach(item => {
+
+            item.classList.remove("active");
+
+        });
+
+        button.classList.add("active");
+
+        renderCategory(button.dataset.category);
+
+    });
+
+});
+
+/* -------------------- */
+
+document.addEventListener("DOMContentLoaded", async () => {
+
+    await loadGallery();
+
+});
+
 
 /* ==========================================================
    END
