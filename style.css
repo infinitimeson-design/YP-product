@@ -1,31 +1,19 @@
-
+/* تست نهایی با بالاترین اولویت */
 @media (max-width: 768px) {
-    /* تست برای والد */
-    .portfolio-categories {
+    .portfolio-categories .portfolio-category {
         display: flex !important;
-        flex-direction: row !important;
-        overflow-x: auto !important;
-        background-color: blue !important; /* اگه والد آبی شد، یعنی تا اینجا درسته */
-        padding: 20px !important;
-    }
-
-    /* تست برای دکمه‌ها */
-    .portfolio-category {
-        display: flex !important;
-        background: red !important; /* اگه دکمه‌ها قرمز شدن، یعنی CSS داره اعمال میشه */
+        background-color: red !important;
+        border: 5px solid yellow !important; /* حاشیه زرد ضخیم برای اینکه مطمئن شیم دیده میشه */
         color: white !important;
-        border: 2px solid white !important;
         flex: 0 0 auto !important;
         width: auto !important;
         min-width: 150px !important;
-        margin-right: 10px !important;
+        padding: 20px !important;
+        margin: 10px !important;
     }
 }
 
-
-
-
-========YP PRODUCT========================================
+================================================
    RESET
 ========================================================= */
 
