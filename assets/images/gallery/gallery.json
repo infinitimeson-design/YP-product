@@ -1,17 +1,41 @@
 {
-  "advertising": [
-    "01.jpg"
-  ],
+  "advertising": {
+    "title": "عکاسی تبلیغاتی و چیدمان",
+    "folder": "advertising",
+    "images": [
+      "01.jpg"
+    ]
+  },
 
-  "jewelry": [
-    "01.jpg"
-  ],
+  "jewelry": {
+    "title": "عکاسی طلا و جواهر",
+    "folder": "jewelry",
+    "images": [
+      "01.jpg"
+    ]
+  },
 
-  "food": [],
+  "food": {
+    "title": "عکاسی تبلیغاتی غذا",
+    "folder": "food",
+    "images": []
+  },
 
-  "industrial": [],
+  "industrial": {
+    "title": "عکاسی صنعتی و زمینه سفید",
+    "folder": "industrial",
+    "images": []
+  },
 
-  "birthday": [],
+  "birthday": {
+    "title": "عکاسی تولد و مهمانی",
+    "folder": "birthday",
+    "images": []
+  },
 
-  "wedding": []
+  "wedding": {
+    "title": "عکاسی مراسم عقد و ازدواج",
+    "folder": "wedding",
+    "images": []
+  }
 }
