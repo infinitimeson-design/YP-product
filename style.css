@@ -3287,6 +3287,62 @@ button,
     }
 
 }
+
+/* ==========================================
+test
+ =========================================================*/
+
+.portfolio-gallery{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+
+}
+
+
+.portfolio-image{
+
+    aspect-ratio:4/5;
+
+    overflow:hidden;
+
+    border-radius:20px;
+
+}
+
+
+.portfolio-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+
+
+@media(max-width:768px){
+
+.portfolio-gallery{
+
+    grid-template-columns:1fr;
+
+}
+
+
+.portfolio-image{
+
+    aspect-ratio:4/5;
+
+}
+
+}
+
    /* ==========================================
      END
    =========================================================*/
